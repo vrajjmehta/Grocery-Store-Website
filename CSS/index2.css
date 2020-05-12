@@ -1,0 +1,26 @@
+body {
+    height:95%;
+    font-family: Times New Roman, sans-serif;
+}
+
+h1 {
+    text-align:center;
+}
+
+td {
+    font-size: 15px;
+    padding:1px;
+}
+
+#prodInfo {
+    font-family: Times New Roman, sans-serif;
+    margin-top: 5px;
+    margin-left: 25%;
+    width: 50%;
+}
+#prodInfo td{
+    background-color: black;
+    text-align: center;
+    color: whitesmoke;
+}
+
