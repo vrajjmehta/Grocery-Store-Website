@@ -13,7 +13,7 @@
                 <input type="submit" id="clear" value="Clear"/>
             </form>
             <form action="checkout.php" method="post">
-                <input type="submit" id="checkout" value="Checkout" onclick="return display()"/>
+                <input type="submit" id="checkout" value="Checkout" onclick="return display_cart()"/>
             </form>
             <h3>Cart List</h3>
         </div>

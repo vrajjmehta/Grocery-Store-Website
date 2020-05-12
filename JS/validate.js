@@ -1,4 +1,4 @@
-function validate()
+function validate_checkout()
 {
 	var error = true;
 	document.check_out.custName.background = "Red";
@@ -83,4 +83,3 @@ function hasblanks()
 	document.write("..................Exited forloop...");
 	return false;
 }	
-

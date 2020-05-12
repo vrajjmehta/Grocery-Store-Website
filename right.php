@@ -3,7 +3,7 @@
     <title> Grocery Store </title>
     <link rel="stylesheet" href="CSS/right.css" type="text/css">
     <script src="JS/jquery.min.js"></script>
-    <script src="JS/display1.js"></script>
+    <script src="JS/display.js"></script>
     <base target="bottom-frame">
 </head>
 
@@ -36,7 +36,7 @@ $result = mysqli_query($conn,$product_array);
 
 if(mysqli_num_rows($result) == 1){
     echo "<div id='pDisplay'>";
-    echo    "<form name='prodForm' action='session_php.php' method ='get'>";
+    echo "<form name='prodForm' action='session_php.php' method ='get'>";
     $row = mysqli_fetch_assoc($result);                    
     echo "<table id='prodInfo'>";
     echo "<tr><td><b>Product ID:</b></td><td>" . $row['product_id'] . "</td></tr><tr><td><b> Product Name:</b></td><td>" . $row['product_name'] . "</td></tr><tr><td><b>Price:</b></td><td>". $row['unit_price'] . "</td></tr><tr><td><b>Unit Quanity:</b></td><td>". $row['unit_quantity'] . "</td></tr><tr><td><b>In Stock:</b></td><td>".$row['in_stock']. "</td></tr> ";
@@ -47,7 +47,7 @@ if(mysqli_num_rows($result) == 1){
     echo "<input type = 'hidden' id = 'form_products' name = 'form_products' value ='".$row['product_name']."'>";
     echo "<input type ='hidden' id = 'form_prod_price' name = 'form_prod_price' value ='".$row['unit_price']."'>";
     echo "<br>";
-echo"</form></div>";
+    echo"</form></div>";
 }
 else
 {

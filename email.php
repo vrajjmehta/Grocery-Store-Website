@@ -13,7 +13,10 @@ $state= $_REQUEST['state'];
 $country = $_REQUEST['country'];
 $email = $_REQUEST['email'];
 $subject = "Details of order placed.";
-$message = "Dear $name \n Thank you for placing an online order with us. Here are the items that you ordered: \n";
+$message = "Dear $name \n Thank you for placing an online order with us. Here are the items that you ordered: \n
+        <tr> <td>Total price for ".sizeof($_SESSION['products']). " product(s) </td> <td align = 'center'> ".number_format($cartPrice,2)."</td></tr></table></div>
+        <hr/>
+        <br/>";
 $headers = "vrajmehta832@gmail.com";
 
 mail($email, $subject, $message, $headers);

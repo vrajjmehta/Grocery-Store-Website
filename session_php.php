@@ -11,13 +11,11 @@ if(!empty($_REQUEST['form_products']))
 {
 	if(!isset($_SESSION['products']))
 	{
-		
 		$_SESSION['products'][0] = $_REQUEST['form_products'];
 		$_SESSION['quantity'][0] = $_REQUEST['quantity'];
 		$_SESSION['id'][0] = $_REQUEST['prodId'];
 		$_SESSION['unitQuant'][0] = $_REQUEST['unitQuant'];
 		$_SESSION['prodPrice'][0] = $_REQUEST['form_prod_price'];
-		
 	}
 	else
 	{
@@ -41,8 +39,6 @@ if(!empty($_REQUEST['form_products']))
 			$_SESSION['unitQuant'][] = $_REQUEST['unitQuant'];
 		}
 	}
-	
-		
 }
 else
 {
