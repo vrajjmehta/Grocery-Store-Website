@@ -9,7 +9,7 @@ h1 {
 
 td {
     font-size: 15px;
-    padding:1px;
+    padding: 1px;
 }
 
 #prodInfo {
@@ -19,8 +19,7 @@ td {
     width: 50%;
 }
 #prodInfo td{
-    background-color: black;
+    background-color: rgb(173, 18, 18);
     text-align: center;
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.555);
 }
-

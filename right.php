@@ -1,7 +1,7 @@
 <html>
 <head>
     <title> Grocery Store </title>
-    <link rel="stylesheet" href="CSS/index2.css" type="text/css">
+    <link rel="stylesheet" href="CSS/right.css" type="text/css">
     <script src="JS/jquery.min.js"></script>
     <script src="JS/display1.js"></script>
     <base target="bottom-frame">

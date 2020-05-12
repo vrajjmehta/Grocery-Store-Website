@@ -1,7 +1,7 @@
 <html>
     <head>
         <title> Grocery Store</title>
-        <link rel="stylesheet" href="CSS/index3.css" type="text/css">
+        <link rel="stylesheet" href="CSS/cart.css" type="text/css">
         <script src="JS/display.js"></script>
         <script src="JS/jquery.min.js"></script>
         <base target="bottom-frame">
@@ -41,11 +41,11 @@ if(isset($_SESSION['products']))
         print "</table>";
         print "<br>";
         print "<table id='total'>";
-	echo "<tr> <td>Total price for ".sizeof($_SESSION['products']). " product(s): </td> <td align = 'center'> ".number_format($cartPrice,2)."</td></tr></table></div>";
+        echo "<tr> <td>Total price for ".sizeof($_SESSION['products']). " product(s): </td> <td align = 'center'> ".number_format($cartPrice,2)."</td></tr></table></div>";
 }
 else
 {
-	echo "<h1> Shopping cart is currenty empty. Please pick a product...</h1>";
+	echo "<h1> Shopping cart is empty. Please pick a product.</h1>";
 }
 
 ?>
