@@ -5,13 +5,19 @@
 <body>
 <?php
 session_start();
+
 error_reporting(0);
+
+// Fetch user details from form name = "check_out" through REQUEST,
 $name = $_REQUEST['custName'];
 $address = $_REQUEST['address'];
 $suburb = $_REQUEST['suburb'];
 $state= $_REQUEST['state'];
 $country = $_REQUEST['country'];
 $email = $_REQUEST['email'];
+
+// PHP MAIL syntax to send an email
+
 $subject = "Details of order placed.";
 $message = "Dear $name \n Thank you for placing an online order with us. Here are the items that you ordered: \n
         <tr> <td>Total price for ".sizeof($_SESSION['products']). " product(s) </td> <td align = 'center'> ".number_format($cartPrice,2)."</td></tr></table></div>

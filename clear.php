@@ -9,6 +9,7 @@
     <body onload="return clear()">
         <div id="title">
             <?php
+            // session destroy will remove all the products stored in session. Thus empty the cart
             session_start();
             session_destroy();
             ?>

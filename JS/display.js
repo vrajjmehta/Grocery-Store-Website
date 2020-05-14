@@ -4,13 +4,13 @@ function display_cart()
     
     if(x>1)
     {
-    $("body",parent.document).find('#left').hide();  
-    $("body",parent.document).find('#right').hide();
+        $("body",parent.document).find('#left').hide();  
+        $("body",parent.document).find('#right').hide();
     }
     else
     {
-      alert('Product list is empty. Please add product for checkout.'); 
-      $("body",parent.document).find('#bottom').show();
+        alert('Product list is empty. Please add product for checkout.'); 
+        $("body",parent.document).find('#bottom').show();
     }
     
 }

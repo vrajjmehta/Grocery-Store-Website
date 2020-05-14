@@ -10,15 +10,18 @@
 <body>
     <h1>Product Information</h1>   
 <?php
-$servername = "127.0.0.1:3306";
-$username = "root";
-$password = "password";
-$dbname = "poti";
 
-// $servername = "rerun.it.uts.edu.au";
-// $username = "potiro";
-// $password = "pcXZb(kL";
+// Intiate DB setup for local
+// $servername = "127.0.0.1:3306";
+// $username = "root";
+// $password = "password";
 // $dbname = "poti";
+
+// Intiate DB setup for UTS server
+$servername = "rerun.it.uts.edu.au";
+$username = "potiro";
+$password = "pcXZb(kL";
+$dbname = "poti";
 
 if(isset($_GET) && !empty($_GET)){
     // echo "Empty";
@@ -30,13 +33,15 @@ $var = $_GET['id'];
 // Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);
 
+// Fetch products for required category
 $product_array = "SELECT * FROM products WHERE product_id='$var'";
 
 $result = mysqli_query($conn,$product_array);
 
+// Display detailed information for particular product of a category
 if(mysqli_num_rows($result) == 1){
     echo "<div id='pDisplay'>";
-    echo "<form name='prodForm' action='session_php.php' method ='get'>";
+    echo "<form name='prodForm' action='session.php' method ='get'>";
     $row = mysqli_fetch_assoc($result);                    
     echo "<table id='prodInfo'>";
     echo "<tr><td><b>Product ID:</b></td><td>" . $row['product_id'] . "</td></tr><tr><td><b> Product Name:</b></td><td>" . $row['product_name'] . "</td></tr><tr><td><b>Price:</b></td><td>". $row['unit_price'] . "</td></tr><tr><td><b>Unit Quanity:</b></td><td>". $row['unit_quantity'] . "</td></tr><tr><td><b>In Stock:</b></td><td>".$row['in_stock']. "</td></tr> ";
@@ -58,5 +63,3 @@ mysqli_close($conn);
 ?>
 </body>
 </html>
-
-

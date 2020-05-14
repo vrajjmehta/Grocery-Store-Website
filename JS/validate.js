@@ -1,5 +1,6 @@
 function validate_checkout()
 {
+	// Check the details entered by user is valid
 	var error = true;
 	document.check_out.custName.background = "Red";
 	if (document.check_out.custName.value == "")
@@ -50,36 +51,3 @@ function validate_checkout()
 		return true;
 	}
 }
-
-function validate_form()
-{	
-	document.write ("HERE AT VALIDATE_FORM");
-	var bool = true;
-	if (hasblanks()){
-		alert("One or more compulsory\nfields is blank");
-		bool = false;
-	}
-	document.write("Finally returning "+ bool);
-	return bool;
-
-}
-
-function hasblanks()
-{
-	var compulsory_fields = new Array("custName","address","suburb","state","country","email");
-	for (i=0;i<compulsory_fields.length;i++)
-	{
-		document.write("I am here at "+i+" "+compulsory_fields[i]+ " ");
-		document.write(document.getElementById(compulsory_fields[i]));
-		var form_field = document.getElementById(compulsory_fields[i]);
-		document.write(" This is the value of form_field : "+ form_field);
-		document.write("****************************");
-		if (form_field == "")
-		{
-			document.write("Entered inside");
-			return true;
-		}
-	}
-	document.write("..................Exited forloop...");
-	return false;
-}	

@@ -8,9 +8,10 @@
 session_start();
 
 if(!empty($_REQUEST['form_products']))
-{
+{	
+	// Assign SESSION variables to values received from submitting the form
 	if(!isset($_SESSION['products']))
-	{
+	{	
 		$_SESSION['products'][0] = $_REQUEST['form_products'];
 		$_SESSION['quantity'][0] = $_REQUEST['quantity'];
 		$_SESSION['id'][0] = $_REQUEST['prodId'];
@@ -50,7 +51,7 @@ else
 <form id = "updateCart" action = "cart.php" method = "post"> 
 <input type = "hidden" id = "update" name = "update">
 <script type = "text/javascript">
-        document.getElementById("updateCart").submit();     
+    document.getElementById("updateCart").submit();     
 </script>
 </form>
 
