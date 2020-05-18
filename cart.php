@@ -32,9 +32,9 @@ if(isset($_SESSION['products']))
 	$cartPrice = 0;
 	for ($i=0;$i<sizeof($_SESSION['products']);$i++)    //loop to display for 'n' number of products in the cart
 	{
-		print "<tr> <td align = 'center'>".$_SESSION['id'][$i]. "</td>";
+		print "<tr> <td align = 'center'>". $_SESSION['id'][$i]. "</td>";
 		print "<td align = 'center'>". $_SESSION['products'][$i]."</td> ";
-		print "<td align = 'center'>".$_SESSION['unitQuant'][$i]."</td>";
+		print "<td align = 'center'>". $_SESSION['unitQuant'][$i]."</td>";
 		print "<td align = 'center'>". $_SESSION['prodPrice'][$i] ."</td>";
 		print "<td align = 'center'>". $_SESSION['quantity'][$i]."</td>";
 		$tmp = $_SESSION['prodPrice'][$i]*$_SESSION['quantity'][$i];

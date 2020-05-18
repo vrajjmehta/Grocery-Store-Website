@@ -12,16 +12,16 @@
 <?php
 
 // Intiate DB setup for local
-// $servername = "127.0.0.1:3306";
-// $username = "root";
-// $password = "password";
-// $dbname = "poti";
+$servername = "127.0.0.1:3306";
+$username = "root";
+$password = "password";
+$dbname = "poti";
 
 // Intiate DB setup for UTS server
-$servername = "rerun.it.uts.edu.au";
-$username = "potiro";
-$password = "pcXZb(kL";
-$dbname = "poti";
+// $servername = "rerun.it.uts.edu.au";
+// $username = "potiro";
+// $password = "pcXZb(kL";
+// $dbname = "poti";
 
 if(isset($_GET) && !empty($_GET)){
     // echo "Empty";
@@ -31,7 +31,7 @@ if(isset($_GET) && !empty($_GET)){
 $var = $_GET['id'];
 
 // Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Fetch products for required category
 $product_array = "SELECT * FROM products WHERE product_id='$var'";
@@ -54,9 +54,9 @@ if(mysqli_num_rows($result) == 1){
     echo "<br>";
     echo"</form></div>";
 }
-else
+else if(!($result))
 {
-    echo "<h1> No product has been chosen yet. </h1> ";
+    echo "<h1> No product to display. </h1> ";
 }
 mysqli_close($conn);
 

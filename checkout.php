@@ -65,8 +65,8 @@ if(isset($_SESSION['products']))
 // If no product has been added to the cart
 if(!isset($_SESSION['products']))
 {
-	echo "<h6>Product list is empty. Please add product for checkout...</h6>";
-	echo '<a href="cart.php">Go back to cart</a>';
+	echo "<h6>Product list is empty. Please add product to Checkout.</h6>";
+	echo '<a href="cart.php">Return to cart</a>';
 }
 ?> 
 </div>
