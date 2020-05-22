@@ -5,78 +5,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Grocery Store</title>
         <link rel="stylesheet" href="CSS/index.css" type="text/css">
-        <script type="text/javascript"> 
-            //Javascript to map the images to the screen coordinates
-            function displayCategories(arg) {
-                document.getElementById('pic').src = arg.concat(".png");
-                document.getElementById('pic').useMap = "#".concat(arg);
-            }
-            //Javascript to only display Categories
-            function closeCategories(){
-                displayCategories("Images/Categories");
-            }
-</script>
-
-    <base target="right-frame">
+        <script src="JS/display.js"></script>
+        <base target="right-frame">
     </head>
     <body>
+        <!-- Left frame for displaying the image map information -->
         <div id="left">
             <div id="parentclass"> <!-- Image Map for Categories-->
-                <img id="pic" src="Images/Categories.png" width="600" height="500" alt="" usemap="#Images/Categories">
+                <img id="pic" src="Images/Categories.png" width="750" height="750" alt="" usemap="#Images/Categories">
                 <map name="Images/Categories" id="Categories">
-                    <area target="_self" coords="32,152,92,212" shape="rect" onmouseover="displayCategories('Images/FrozenFood')">
-                    <area target="_self" coords="142,152,202,212" shape="rect" onmouseover="displayCategories('Images/FreshFood')">
-                    <area target="_self" coords="262,152,332,212" shape="rect" onmouseover="displayCategories('Images/Beverages')">
-                    <area target="_self" coords="387,152,452,212" shape="rect" onmouseover="displayCategories('Images/HomeHealth')">
-                    <area target="_self" coords="502,152,572,212" shape="rect" onmouseover="displayCategories('Images/PetFood')">
+                    <area target="_self" coords="32,220,112,312" shape="rect" onmouseover="displayCategories('Images/FrozenFood')">
+                    <area target="_self" coords="172,220,252,312" shape="rect" onmouseover="displayCategories('Images/FreshFood')">
+                    <area target="_self" coords="322,220,402,312" shape="rect" onmouseover="displayCategories('Images/Beverages')">
+                    <area target="_self" coords="472,220,552,312" shape="rect" onmouseover="displayCategories('Images/HomeHealth')">
+                    <area target="_self" coords="632,220,712,312" shape="rect" onmouseover="displayCategories('Images/PetFood')">
                 </map>
                 <div id="childclass">
                 <map name="Images/FrozenFood" id="FrozenFood"><!-- Image Map for FrozenFood with links to display detailed information-->
-                    <area coords="0,0,0,150,90,150,90,210,140,210,140,150,200,150,200,210,260,210,260,150,330,150,330,210,385,210,385, 150,450,150,450,210,500,210,500,150,570,150,570,0" shape="poly" onmouseover="closeCategories()">
-                    <area coords="31,410,90,460" shape="rect" href="right.php?id=1000">
-                    <area coords="110,410,170,460" shape="rect" href="right.php?id=1001">
-                    <area coords="180,410,250,460" shape="rect" href="right.php?id=1003">
-                    <area coords="290,410,370,460" shape="rect" href="right.php?id=1004">
-                    <area coords="380,410,450,460" shape="rect" href="right.php?id=1005">
-                    <area coords="490,410,560,460" shape="rect" href="right.php?id=1002">
+                    <area coords="0,0,0,220,112,220,112,312,172,312,172,220,252,220,252,312,322,210,322,220,402,220,402,312,472,312,472,220,552,220,552,312,632,312,632,220,712,220,712,0" shape="poly" onmouseover="closeCategories()">
+                    <area coords="31,610,110,695" shape="rect" href="right.php?id=1000">
+                    <area coords="130,610,210,695" shape="rect" href="right.php?id=1001">
+                    <area coords="230,610,310,695" shape="rect" href="right.php?id=1003">
+                    <area coords="360,610,455,695" shape="rect" href="right.php?id=1004">
+                    <area coords="470,610,560,695" shape="rect" href="right.php?id=1005">
+                    <area coords="615,610,700,695" shape="rect" href="right.php?id=1002">
                 </map>
                 <map name="Images/FreshFood" id="FreshFood"><!-- Image Map for FreshFood with links to display detailed information-->
-                    <area coords="0,0,0,150,90,150,90,210,140,210,140,150,200,150,200,210,260,210,260,150,330,150,330,210,385,210,385, 150,450,150,450,210,500,210,500,150,570,150,570,0" shape="poly" onmouseover="closeCategories()">
-                    <area coords="30,295,90,350" shape="rect" href="right.php?id=3002">
-                    <area coords="53,430,120,484" shape="rect" href="right.php?id=3000">
-                    <area coords="167,430,228,485" shape="rect" href="right.php?id=3001">
-                    <area coords="190,295,250,350" shape="rect" href="right.php?id=3003">
-                    <area coords="270,295,340,350" shape="rect" href="right.php?id=3004">
-                    <area coords="360,295,420,350" shape="rect" href="right.php?id=3006">
-                    <area coords="438,295,500,350" shape="rect" href="right.php?id=3007">
-                    <area coords="520,295,580,350" shape="rect" href="right.php?id=3005">
+                    <area coords="0,0,0,220,112,220,112,312,172,312,172,220,252,220,252,312,322,210,322,220,402,220,402,312,472,312,472,220,552,220,552,312,632,312,632,220,712,220,712,0" shape="poly" onmouseover="closeCategories()">
+                    <area coords="30,440,110,525" shape="rect" href="right.php?id=3002">
+                    <area coords="73,650,150,734" shape="rect" href="right.php?id=3000">
+                    <area coords="200,650,277,734" shape="rect" href="right.php?id=3001">
+                    <area coords="235,440,315,525" shape="rect" href="right.php?id=3003">
+                    <area coords="340,440,420,525" shape="rect" href="right.php?id=3004">
+                    <area coords="445,440,525,525" shape="rect" href="right.php?id=3006">
+                    <area coords="545,440,625,525" shape="rect" href="right.php?id=3007">
+                    <area coords="645,440,725,525" shape="rect" href="right.php?id=3005">
                 </map>
                 <map name="Images/Beverages" id="Beverages"><!-- Image Map for Beverages with links to display detailed information-->
-                    <area coords="0,0,0,150,90,150,90,210,140,210,140,150,200,150,200,210,260,210,260,150,330,150,330,210,385,210,385, 150,450,150,450,210,500,210,500,150,570,150,570,0" shape="poly" onmouseover="closeCategories()">
-                    <area coords="63,420,130,474" shape="rect" href="right.php?id=4003">
-                    <area coords="170,415,230,474" shape="rect" href="right.php?id=4004">
-                    <area coords="265,405,325,464" shape="rect" href="right.php?id=4000">
-                    <area coords="343,408,410,464" shape="rect" href="right.php?id=4001">
-                    <area coords="430,410,490,463" shape="rect" href="right.php?id=4002">
-                    <area coords="490,300,550,355" shape="rect" href="right.php?id=4005">
+                    <area coords="0,0,0,220,112,220,112,312,172,312,172,220,252,220,252,312,322,210,322,220,402,220,402,312,472,312,472,220,552,220,552,312,632,312,632,220,712,220,712,0" shape="poly" onmouseover="closeCategories()">
+                    <area coords="80,625,160,714" shape="rect" href="right.php?id=4003">
+                    <area coords="215,625,295,714" shape="rect" href="right.php?id=4004">
+                    <area coords="328,613,408,703" shape="rect" href="right.php?id=4000">
+                    <area coords="428,613,508,703" shape="rect" href="right.php?id=4001">
+                    <area coords="537,613,617,703" shape="rect" href="right.php?id=4002">
+                    <area coords="615,450,695,535" shape="rect" href="right.php?id=4005">
                 </map>
                 <map name="Images/HomeHealth" id="HomeHealth"><!-- Image Map for HomeHealth with links to display detailed information-->
-                    <area coords="0,0,0,150,90,150,90,210,140,210,140,150,200,150,200,210,260,210,260,150,330,150,330,210,385,210,385, 150,450,150,450,210,500,210,500,150,570,150,570,0" shape="poly" onmouseover="closeCategories()">
-                    <area coords="140,280,200,330" shape="rect" href="right.php?id=2002">
-                    <area coords="165,390,225,440" shape="rect" href="right.php?id=2000">
-                    <area coords="260,390,325,440" shape="rect" href="right.php?id=2001">
-                    <area coords="310,280,370,335" shape="rect" href="right.php?id=2005">
-                    <area coords="370,390,430,440" shape="rect" href="right.php?id=2003">
-                    <area coords="460,390,520,440" shape="rect" href="right.php?id=2004">
-                    <area coords="483,280,547,338" shape="rect" href="right.php?id=2006">
-                </map>            
+                    <area coords="0,0,0,220,112,220,112,312,172,312,172,220,252,220,252,312,322,210,322,220,402,220,402,312,472,312,472,220,552,220,552,312,632,312,632,220,712,220,712,0" shape="poly" onmouseover="closeCategories()">
+                    <area coords="170,420,250,500" shape="rect" href="right.php?id=2002">
+                    <area coords="205,580,280,660" shape="rect" href="right.php?id=2000">
+                    <area coords="325,580,400,660" shape="rect" href="right.php?id=2001">
+                    <area coords="385,420,465,500" shape="rect" href="right.php?id=2005">
+                    <area coords="460,580,535,660" shape="rect" href="right.php?id=2003">
+                    <area coords="575,580,650,660" shape="rect" href="right.php?id=2004">
+                    <area coords="605,420,680,500" shape="rect" href="right.php?id=2006">
+                </map>          
                 <map name="Images/PetFood" id="PetFood"><!-- Image Map for PetFood with links to display detailed information-->
-                    <area coords="0,0,0,150,90,150,90,210,140,210,140,150,200,150,200,210,260,210,260,150,330,150,330,210,385,210,385, 150,450,150,450,210,500,210,500,150,570,150,570,0" shape="poly" onmouseover="closeCategories()">
-                    <area coords="210,290,270,345" shape="rect" href="right.php?id=5002">
-                    <area coords="310,290,375,347" shape="rect" href="right.php?id=5003">
-                    <area coords="370,417,440,470" shape="rect" href="right.php?id=5001">
-                    <area coords="460,417,525,470" shape="rect" href="right.php?id=5000">
-                    <area coords="510,290,570,346" shape="rect" href="right.php?id=5004">
+                    <area coords="0,0,0,220,112,220,112,312,172,312,172,220,252,220,252,312,322,210,322,220,402,220,402,312,472,312,472,220,552,220,552,312,632,312,632,220,712,220,712,0" shape="poly" onmouseover="closeCategories()">
+                    <area coords="260,430,335,515" shape="rect" href="right.php?id=5002">
+                    <area coords="390,430,465,515" shape="rect" href="right.php?id=5003">
+                    <area coords="470,620,545,705" shape="rect" href="right.php?id=5001">
+                    <area coords="575,620,650,705" shape="rect" href="right.php?id=5000">
+                    <area coords="640,430,720,515" shape="rect" href="right.php?id=5004">
                 </map>
                 </div>
             </div>

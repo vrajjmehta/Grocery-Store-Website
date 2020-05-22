@@ -45,7 +45,7 @@ li{
 #bottom {
     float: right;
     width: 61%;
-    height: 250px;
+    height: 500px;
     color:black;
     background-color: rgba(0, 60, 255);
     position: relative;
@@ -96,6 +96,6 @@ a:visited
 }
 @media only screen and (min-width: 1538px) and (max-width:1920px) {
     #bottom,#right {
-    width: 69%;
+    width: 61%;
     }
 }

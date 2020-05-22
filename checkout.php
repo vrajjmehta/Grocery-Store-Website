@@ -9,7 +9,8 @@
 
     <body>
         <div id="title">
-            <h3>Product List</h3>
+			<h3>Product List</h3>
+		</div>
         <div>
         <?php
 
@@ -17,7 +18,13 @@ session_start();
 	
 if(isset($_SESSION['products']))
 {	
-	print "<table id = 'list'> <tr> <th> Product ID</th> <th> Product Name </th> <th>Unit Quantity</th> <th> Unit Price ($)</th> <th> Units in cart </th> <th> Value in Cart ($) </th> ";
+	print "<table id = 'list'> <tr> 
+			<th> Product ID</th> 
+			<th> Product Name </th> 
+			<th>Unit Quantity</th>
+			<th> Unit Price ($)</th> 
+			<th> Units in cart </th> 
+			<th> Value in Cart ($) </th> ";
 
 	$cartPrice = 0;
 	// Display all the product information in the cart using SESSION variable
@@ -25,10 +32,10 @@ if(isset($_SESSION['products']))
 	{
 		echo "<tr> <td align = 'center'>".$_SESSION['id'][$i]. "</td>
 		<td align = 'center'>". $_SESSION['products'][$i]."</td>
-		<td align = 'center'>".$_SESSION['unitQuant'][$i]."</td>
-		<td align = 'center'>". $_SESSION['prodPrice'][$i] ."</td>
+		<td align = 'center'>".$_SESSION['quant'][$i]."</td>
+		<td align = 'center'>". $_SESSION['price'][$i] ."</td>
 		<td align = 'center'>". $_SESSION['quantity'][$i]."</td>";
-		$tmp = $_SESSION['prodPrice'][$i]*$_SESSION['quantity'][$i];
+		$tmp = $_SESSION['price'][$i]*$_SESSION['quantity'][$i];
 		echo "<td align = 'center'> ".number_format($tmp,2) ."</td></tr>";
 		$cartPrice += $tmp;
 	}

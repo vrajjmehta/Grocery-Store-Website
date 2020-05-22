@@ -34,10 +34,10 @@ if(isset($_SESSION['products']))
 	{
 		print "<tr> <td align = 'center'>". $_SESSION['id'][$i]. "</td>";
 		print "<td align = 'center'>". $_SESSION['products'][$i]."</td> ";
-		print "<td align = 'center'>". $_SESSION['unitQuant'][$i]."</td>";
-		print "<td align = 'center'>". $_SESSION['prodPrice'][$i] ."</td>";
+		print "<td align = 'center'>". $_SESSION['quant'][$i]."</td>";
+		print "<td align = 'center'>". $_SESSION['price'][$i] ."</td>";
 		print "<td align = 'center'>". $_SESSION['quantity'][$i]."</td>";
-		$tmp = $_SESSION['prodPrice'][$i]*$_SESSION['quantity'][$i];
+		$tmp = $_SESSION['price'][$i]*$_SESSION['quantity'][$i];
 		print "<td align = 'center'> ".number_format($tmp,2) ."</td></tr>";
 		$cartPrice += $tmp;     // Append the Total Cart Amount
 	}

@@ -15,8 +15,8 @@ if(!empty($_REQUEST['form_products']))
 		$_SESSION['products'][0] = $_REQUEST['form_products'];
 		$_SESSION['quantity'][0] = $_REQUEST['quantity'];
 		$_SESSION['id'][0] = $_REQUEST['prodId'];
-		$_SESSION['unitQuant'][0] = $_REQUEST['unitQuant'];
-		$_SESSION['prodPrice'][0] = $_REQUEST['form_prod_price'];
+		$_SESSION['quant'][0] = $_REQUEST['unitQuant'];
+		$_SESSION['price'][0] = $_REQUEST['form_prod_price'];
 	}
 	else
 	{
@@ -34,10 +34,10 @@ if(!empty($_REQUEST['form_products']))
 		if(!$match)
 		{
 			$_SESSION['products'][] = $_REQUEST['form_products'];
-			$_SESSION['prodPrice'][] = $_REQUEST['form_prod_price']; 
-			$_SESSION['id'][] = $newProdID;
 			$_SESSION['quantity'][] = $_REQUEST['quantity'];
-			$_SESSION['unitQuant'][] = $_REQUEST['unitQuant'];
+			$_SESSION['id'][] = $newProdID;
+			$_SESSION['quant'][] = $_REQUEST['unitQuant'];
+			$_SESSION['price'][] = $_REQUEST['form_prod_price']; 
 		}
 	}
 }

@@ -1,3 +1,15 @@
+
+//Javascript to map the images to the screen coordinates
+function displayCategories(arg) {
+    document.getElementById('pic').src = arg.concat(".png");
+    document.getElementById('pic').useMap = "#".concat(arg);
+}
+
+//Javascript to only display Categories
+function closeCategories(){
+    displayCategories("Images/Categories");
+}
+
 function display_cart()
 {
     var x = document.getElementById("list").rows.length;
