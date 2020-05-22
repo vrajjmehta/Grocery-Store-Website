@@ -15,6 +15,13 @@ h3{
     margin:0;
     color: black;
 }
+a{
+    color: whitesmoke;
+}
+
+table{
+    color: whitesmoke;
+}
 
 td {
     padding:2px;

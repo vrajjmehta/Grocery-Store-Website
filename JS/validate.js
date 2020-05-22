@@ -36,6 +36,7 @@ function validate_checkout()
 	if (document.check_out.email.value == "")
 	{
 		error_type = 1;
+		
 		document.check_out.email.focus();
 		error = false;
 	}
@@ -43,8 +44,7 @@ function validate_checkout()
 	if (error == false)
 	{
         alert("The required fields are not filled in.");
-        
-            return false;
+        return false;
 	} 
 	else
 	{

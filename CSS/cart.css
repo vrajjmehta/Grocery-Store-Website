@@ -15,6 +15,15 @@ h3{
     color: black;
 }
 
+#clear-message{
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+}
+
+a{
+    color: whitesmoke;
+}
 td {
 
     padding:2px;

@@ -9,11 +9,16 @@
     <body onload="return clear()">
         <div id="title">
             <?php
-            // session destroy will remove all the products stored in session. Thus empty the cart
-            session_start();
-            session_destroy();
+                // session destroy will remove all the products stored in session. Thus empty the cart
+                session_start();
+                session_destroy();
             ?>
         </div>
-        <a href="cart.php">Go back to cart</a>
+        <div id="clear-message">
+            <?php
+                echo "<h3>Product list is empty. Please add product to Checkout.<h3>";
+                echo '<a href="cart.php">Return to cart</a>';
+            ?>
+        </div>
     </body>
 </html>

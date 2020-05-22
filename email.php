@@ -30,10 +30,10 @@ $message = "Dear $name \n, Thank you for placing an online order with us. Here a
             $message .="<tr>
               <td align = 'center'>". $_SESSION['id'][$i]. "</td>
               <td align = 'center'>". $_SESSION['products'][$i]."</td>
-              <td align = 'center'>". $_SESSION['unitQuant'][$i]."</td>
-              <td align = 'center'>". $_SESSION['prodPrice'][$i] ."</td>
+              <td align = 'center'>". $_SESSION['quant'][$i]."</td>
+              <td align = 'center'>". $_SESSION['price'][$i] ."</td>
               <td align = 'center'>". $_SESSION['quantity'][$i]."</td>";
-            $tmp = $_SESSION['prodPrice'][$i]*$_SESSION['quantity'][$i];
+            $tmp = $_SESSION['price'][$i]*$_SESSION['quantity'][$i];
             $cartPrice += $tmp;
             $message .= "<td align = 'center'>".number_format($tmp,2) ."</td></tr>";
             }
@@ -43,6 +43,7 @@ $message = "Dear $name \n, Thank you for placing an online order with us. Here a
 mail($email, $subject, $message, $headers);
 echo "Dear $name <br> Thank you for placing an online order with us.<br>";
 print "Your mail has been sent. Your order will be delivered soon.";
+session_destroy();
 ?>
 
 </body>

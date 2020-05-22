@@ -12,16 +12,16 @@
 <?php
 
 // Intiate DB setup for local
-$servername = "127.0.0.1:3306";
-$username = "root";
-$password = "password";
-$dbname = "poti";
+// $servername = "127.0.0.1:3306";
+// $username = "root";
+// $password = "password";
+// $dbname = "poti";
 
 // Intiate DB setup for UTS server
-// $servername = "rerun.it.uts.edu.au";
-// $username = "potiro";
-// $password = "pcXZb(kL";
-// $dbname = "poti";
+$servername = "rerun.it.uts.edu.au";
+$username = "potiro";
+$password = "pcXZb(kL";
+$dbname = "poti";
 
 if(isset($_GET) && !empty($_GET)){
     // echo "Empty";

@@ -42,7 +42,8 @@ if(isset($_SESSION['products']))
         echo "</table>
 		<br>
 		<table id='total'>
-		<tr> <td>Total price for ".sizeof($_SESSION['products']). " product(s) </td> <td align = 'center'> ".number_format($cartPrice,2)."</td></tr></table></div>
+		<tr> <td>Total price for ".sizeof($_SESSION['products']). " product(s) </td> <td align = 'center'> ".number_format($cartPrice,2)."</td></tr>
+		</table>
 		<hr/>
 		<br/>";
 		echo"<h3>&nbsp;&nbsp;&nbsp;&nbsp;Checkout</h3>
@@ -62,17 +63,17 @@ if(isset($_SESSION['products']))
 			<tr> <td> Country:<span style = "color:red;">*</span>  </td>
 			<td> <input type = "text" id = "country" name = "country"> </td> </tr>
 			<tr> <td> Email<span style= "color:red;">*</span> </td>
-			<td> <input type = "text" id = "email" name = "email"> </td> </tr>
+			<td> <input type = "email" id = "email" name = "email"> </td> </tr>
 			<tr> <td colspan ="2" align = "center"> <input type = "submit" value = "Purchase" ></td> </tr>
 			</table>
-		</form>';
+		</form></div>';
 }?>
 
 <?php
 // If no product has been added to the cart
 if(!isset($_SESSION['products']))
 {
-	echo "<h6>Product list is empty. Please add product to Checkout.</h6>";
+	echo "<h3>Product list is empty. Please add product to Checkout.</h3>";
 	echo '<a href="cart.php">Return to cart</a>';
 }
 ?> 
