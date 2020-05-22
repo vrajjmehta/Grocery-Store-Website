@@ -1,5 +1,6 @@
 <html>
   <head>
+  <link rel="stylesheet" href="CSS/checkout.css" type="text/css">
   <base target="bottom-frame">
 </head>
 <body>
@@ -41,9 +42,14 @@ $message = "Dear $name \n, Thank you for placing an online order with us. Here a
             $message .="</table><tr> <td>Total price for ".sizeof($_SESSION['products']). " product(s) </td> <td align = 'center'> ".number_format($cartPrice,2)."</td></tr></table>";
 
 mail($email, $subject, $message, $headers);
-echo "Dear $name <br> Thank you for placing an online order with us.<br>";
-print "Your mail has been sent. Your order will be delivered soon.";
-session_destroy();
+?>
+
+<div id='email'>
+<?php
+  echo "<br><br>Dear $name <br> Thank you for placing an online order with us.<br>";
+  echo "Your mail has been sent. Your order will be delivered soon.<br><br>";
+  echo '<a href="index.html">Return to Grocery Store</a>';
+  session_destroy();
 ?>
 
 </body>
